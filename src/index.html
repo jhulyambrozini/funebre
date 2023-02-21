@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+
+    <link rel="stylesheet" href="./styles/main.scss">
+
+    <title>Funebre</title>
+</head>
+<body>
+
+    
+    <div id="root">
+        <header>
+            <div class="container">
+                <div class="col-01 logo">
+                    <img src="./assets/images/logo-funebre.png" alt="uma cruz, no meio está escrito funebre">
+                </div>
+                <nav class="nav col-03">
+                    <a class="nav__item" href="#sobre">Sobre</a>
+                    <a class="nav__item" href="#serviços">Serviços</a>
+                    <a class="nav__item" href="#como-achar">Contatos</a>
+                </nav>
+                <div class="hero col-12">
+                    <picture>
+                        <source srcset="./assets/images/banner-funebre-sm.png" media="(max-width: 426px)">
+                        <img src="./assets/images/banner-funebre.png" alt="Casa funerária, fundo roxo e ao aldo do texto há uma imagem de duas velas.">
+                    </picture>
+                </div>
+            </div>
+            <div>
+                <h2 class="section-title">A assistência que você precisa nos momentos mais difíceis.</h2>
+            </div>
+        </header>
+        <section id="sobre" class="sobre">
+            <div class="container">
+                <article>
+                    <h2 class="sobre__title">Sobre nós</h2>
+                    <p class="sobre__desc">Nossa funerária está aqui para cuidar de todos os detalhes, com assistência completa à família. Proporcionamos com qualidade, a última homenagem a memória do seu ente querido. Oferecemos os serviços de funerária pelo menor preço.
+                    Asseguramos um serviço de excelência na orientação e acompanhamento de questões inerentes, incluindo a resolução de trâmites burocráticos junto ao cartório.</p>
+                </article>
+            </div>
+        </section>
+        <section id="serviços">
+            <div class="container">
+                <article class="col-12">
+                    <h2>Nossos serviços</h2>
+                    <div class="vitrine">
+                        <div class="vitrine__item col-12">
+                            <div>
+                                <img class="vitrine__image" src="./assets/images/urna.png" alt="Cremação">
+                            </div>
+                            <h3 class="vitrine__title">Cremação</h3>
+                            <p class="vitrine__desc">Uma alternativa ecológica e econômica, reduzindo o corpo a cinzas.</p>
+                        </div>
+                        <div class="vitrine__item col-12">
+                            <div>
+                                <img class="vitrine__image" src="./assets/images/coroa-de-flores.png" alt="coroa de flores">
+                            </div>
+                            <h3 class="vitrine__title">Coroa de flores</h3>
+                            <p class="vitrine__desc">
+                                Faça uma grande homenagem para quem partiu com uma coroa de flores, demostrando carinho.
+                            </p>
+                        </div>
+                        <div class="vitrine__item col-12">
+                            <div >
+                                <img class="vitrine__image" src="./assets/images/planos-funebre.png" alt="planos funerários">
+                            </div>
+                            <h3 class="vitrine__title">Planos funerários</h3>
+                            <p class="vitrine__desc">
+                                Planos acessivéis, para que todos os seus entes queridos recebam um sepultamento de qualidade. 
+                            </p>
+                        </div>
+                        <div class="vitrine__item col-12">
+                            <div>
+                                <img class="vitrine__image" src="./assets/images/cartorio.png" alt="Cartório">
+                            </div>
+                            <h3 class="vitrine__title">Cartório</h3>
+                            <p class="vitrine__desc">
+                                Nossa equipe cuidará de todos os trâmites necessários para obtenção da certidão de óbito.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="como-achar">
+            <div class="container">
+                <article class="col-12">
+                    <h2 class="section-title">Como nos achar</h2>
+                    <div class="contato">
+                        <div class="contato__item col-05">
+                            <img class="contato__img" src="./assets/images/face-ico.png" alt="facebook">
+                            <h3><a class="contato__link" href="">Facebook</a></h3>
+                        </div>
+                        <div class="contato__item col-05">
+                            <img class="contato__img" src="./assets/images/whats-ico.png" alt="Whatsapp">
+                            <h3><a class="contato__link" href="">Whatsapp</a></h3>
+                        </div>
+                        <div class="contato__item col-05">
+                            <img class="contato__img" src="./assets/images/blog-ico.png" alt="Blog">
+                            <h3><a class="contato__link" href="">Blog</a></h3>
+                        </div>
+                        <div class="contato__item col-05">
+                            <img class="contato__img" src="./assets/images/localizacao-ico.png" alt="Endereço">
+                            <h3><a class="contato__link" href="">Endereço</a></h3>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <p class="col-12">&copy; Todos os direitos reservados. <br>
+                <small>Desenvolvido por <a href="https://github.com/jhulyambrozini">Jhuly</a>.</small></p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

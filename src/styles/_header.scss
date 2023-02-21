@@ -1,0 +1,26 @@
+header {
+    .section-title {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .container {
+
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 4rem;
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

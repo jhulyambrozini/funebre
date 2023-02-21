@@ -1,0 +1,20 @@
+@import 'variaveis';
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    align-items: center;
+
+    &__item {
+        color: $font-color-primary;
+        font-size: $font-size-nav;
+        text-decoration: none;
+        position: relative;
+        &:hover {
+            color: $color-secondary;
+            animation: toTop;
+            animation-duration: 2s;
+        }
+    }
+}

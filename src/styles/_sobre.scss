@@ -1,0 +1,20 @@
+@import 'variaveis';
+
+.sobre {
+    background-color: none;
+    
+    .container {
+        background-color: rgba(0, 0, 0, .1);
+        border-radius: .5rem;
+        margin: 2rem;
+        padding: 0 2rem 2rem;
+    }
+
+    &__desc {
+        font-family: $font-primary;
+        line-height: 2.5rem;
+        font-size: $font-size-default;
+        color: $font-color-primary;
+        text-align: justify;
+    }
+}
