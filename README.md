@@ -1,6 +1,6 @@
 # Funebre - funeraria
 Site onepage para uma funerária. Logo e layout pensados por Jhuly Ambrozini.
-Esta aplicação está disponível online no endereço: [Funebre](https://beauty-face.vercel.app/).
+Esta aplicação está disponível online no endereço: [Funebre](https://funebre.vercel.app/).
 
 ![Layout da aplicação](./src/assets/images/layout.png)
 
