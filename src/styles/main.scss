@@ -4,7 +4,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 html {
@@ -15,8 +15,9 @@ html {
 body {
     background-color: $color-grey-10;
     font-family: $font-secondary;
+    min-height: 100vh;
 }
-
+ 
 .container {
     margin: 0 auto;
     padding: 0 188px;
@@ -27,3 +28,4 @@ body {
 }
 
 @import 'header';
+@import 'about';

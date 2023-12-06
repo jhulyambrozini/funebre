@@ -1,0 +1,27 @@
+.about {
+    gap: 25px;
+    margin-top: 7.2rem;
+
+    img {
+        width: 704px;
+        height: 273px;
+        object-fit: cover;
+        filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.05));
+        border-radius: 5px;
+    }
+
+    h2 {
+        color: $color-secondary-01;
+        font-family: $font-primary;
+        font-size: 4.8rem;
+    }
+
+    p {
+        color: $color-grey-02;
+        font-family: $font-secondary;
+        font-size: 1.6rem;
+        line-height: 28px; /* 155.556% */
+        max-width: 495px;
+        margin-top: 1.2rem;
+    }
+}
