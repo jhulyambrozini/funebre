@@ -1,26 +1,62 @@
-header {
-    .section-title {
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
+.header {
+    &__info {
+        background-color: $color-primary-02;
+        color: $color-primary-06;
+        font-size: 1.2rem;
+        padding-top: 1.4rem;
+        padding-bottom: 1.4rem;
     }
 
-    .container {
+    &__nav {
+        background-color: $color-primary-01;
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
 
-        justify-content: space-between;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        .hero {
+        &-menu {
             display: flex;
+            gap: 3.6rem;
+            align-items: center;
             justify-content: center;
-            padding-bottom: 4rem;
-            width: 100%;
 
-            img {
-                width: 100%;
-                height: auto;
+            li {
+                list-style: none;
             }
+
+            a {
+                text-decoration: none;
+                color: $color-grey-10;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__hero {
+        background-color: $color-primary-01;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 560px;
+
+        p {
+            color: $color-grey-10;
+            margin-top: 48px;
+            font-size: 1.6rem;
+        }
+
+        button {
+            padding: 1.2rem 2.4rem;
+            margin: 40px;
+            border-radius: 5px;
+            background: linear-gradient(180deg, #D0530D 0%, #EE702A 100%);
+
+            color: $color-secondary-01;
+            text-align: center;
+            font-family: $font-primary;
+            font-size: 2.0rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            border: none;
         }
     }
 }

@@ -1,72 +1,29 @@
 @import 'variaveis';
-@import 'fonts';
-@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
-@import 'nav';
-
-@viewport {
-    width: device-width;
-    zoom: 1;
-}
+@import 'grid';
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    font-family: $font-primary;
 }
 
 body {
-    background-color: $color-primary;
-    font-family: $font-default;
-    margin: 0;
-}
-
-h2 {
-    color: $font-color-primary;
-    text-align: center;
-    margin-top: 4rem;
-}
-
-article {
-
-    h2 {
-        color: $color-secondary;
-        font-size: 3rem;
-        text-align: left;
-    }
-
-}
-
-
-#root,
-header,
-section,
-footer {
-    display: block;
-    float: left;
-    width: 100%;
-}
-
-section {
-    padding: 4rem 0;
-    margin: 0;
+    background-color: $color-grey-10;
+    font-family: $font-secondary;
 }
 
 .container {
-    display: flex;
-    flex-flow: column;
     margin: 0 auto;
-    max-width: 100%;
-    padding: 0 20px;
+    padding: 0 188px;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-@import 'animations';
 @import 'header';
-@import 'sobre';
-@import 'vitrine';
-@import 'contato';
-@import 'footer';
-@import 'responsivo';
