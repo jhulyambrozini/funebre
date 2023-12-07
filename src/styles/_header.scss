@@ -24,9 +24,30 @@
             }
 
             a {
+                padding: 16px 0;
+                display: inline-block;
                 text-decoration: none;
                 color: $color-grey-10;
                 font-size: 1.6rem;
+
+                &:hover {
+                    color: $color-secondary-05;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    width: 0;
+                    background-color: $color-secondary-05;
+                    margin-top: 4px;
+                    position: relative;
+                    transition: 0.3s;
+                }
             }
         }
     }

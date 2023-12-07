@@ -1,0 +1,73 @@
+.agencies {
+    margin-top: 7.2rem;
+    flex-direction: column;
+
+    &__cards-container {
+        margin-top: 3.2rem;
+        display: flex;
+        gap: 24px;
+    }
+
+    &__card {
+        background-color: $color-grey-10;
+        width: 600px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.10);
+        border-radius: 5px;
+
+        > img {
+            height: 340px;
+            object-fit: cover;
+        }
+
+        &-infos {
+            padding: 2.4rem;
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                color: $color-grey-01;
+                font-family: $font-primary;
+                font-size: 3.2rem;
+                font-weight: 600;
+            }
+
+            p {
+                color: $color-grey-03;
+                text-align: right;
+                font-size: 2.4rem;
+                line-height: 36px; /* 150% */
+            }
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 3rem;
+
+            a {
+                color: $color-secondary-02;
+                font-size: 2rem;
+                text-decoration: none;
+                position: relative;
+
+                &:hover {
+                    color: $color-secondary-05;
+                }
+
+                &:hover:after {
+                    background-color: $color-secondary-05;
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    width: 100%;
+                    background-color: $color-secondary-02;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}
