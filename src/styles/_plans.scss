@@ -1,0 +1,144 @@
+.plans {
+    margin-top: 7.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &::before {
+        background-color: #FFF8F4;
+        content: '';
+        width: 100vw;
+        height: 290px;
+        position: absolute;
+        z-index: -1;
+        bottom: 42px;
+        left: 0;
+    }
+
+    &__cards-container {
+        display: flex;
+        gap: 24px;
+        margin-top: 3.2rem;
+        align-items: center;
+    }
+
+    &__card {
+        width: 400px;
+        height: 358px;
+        padding: 2.4rem;
+        border-radius: 5px;
+        background: $color-grey-10;
+        box-shadow: 0px 1px 5px 0px rgba(18, 18, 18, 0.15);
+
+        &-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                color: $color-secondary-01;
+                font-size: 2.8rem;
+                font-weight: 400;
+            }
+
+            span {
+                color: $color-grey-02;
+                font-size: 2.4rem;
+            }
+
+            sup {
+                font-size: 1.6rem;
+            }
+
+            small {
+                color: $color-grey-02;
+                font-size: 1.8rem;
+            } 
+        }
+
+        &-list {
+            margin-top: 1.6rem;
+            margin-bottom: 1.8rem;
+            li {
+                list-style: none;
+                position: relative;
+                color: $color-grey-04;
+                font-size: 1.8rem;
+                margin-left: 16px;
+                line-height: 28px; /* 155.556% */
+            }
+
+            li::before {
+                content: '';
+                background: $color-secondary-06;
+                width: 5px;
+                height: 2px;
+                top: 14px;
+                left: -16px;
+                position: absolute;
+            }
+        }
+
+        &-button {
+            border: none;
+            cursor: pointer;
+            padding: .8rem 1.6rem;
+            border: 1px solid $color-secondary-01;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            background-color: transparent;
+            color: $color-secondary-01;
+            text-align: center;
+            font-family: $font-primary;
+            font-size: 1.8rem;
+            font-weight: 600;    
+            letter-spacing: 0.27px;
+        }
+    }
+
+    &__card--destach {
+        height: 375px;
+        width: 400px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        padding: 2.4rem;
+        border-radius: 5px;
+        position: relative;
+        background: $color-grey-10;
+
+        &-deco {
+            position: absolute;
+            bottom: 8px;
+            right: 12px;
+        }
+
+        h3 {
+            color: $color-secondary-02;
+            font-size: 3.6rem;
+        }
+
+        ul {
+            margin-top: 1.9rem;
+        }
+
+        &-button {
+            padding: 1.2rem 2.4rem;
+            border-radius: 5px;
+            background: linear-gradient(180deg, #D0530D 0%, #EE702A 100%);
+
+            color: $color-secondary-01;
+            text-align: center;
+            font-family: $font-primary;
+            font-size: 2.0rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            border: none;
+            cursor: pointer;
+            }        
+    }
+
+
+}
