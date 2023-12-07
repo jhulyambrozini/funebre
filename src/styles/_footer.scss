@@ -4,12 +4,13 @@
     padding-bottom: 4rem;
     margin-top: 4rem;
 
+    
+
     &__infos {
         margin: 0 12rem;
         justify-content: space-between;
         padding-bottom: 3.2rem;
         padding-top: 4rem;
-
     }
 
     h3 {
@@ -35,10 +36,20 @@
                 flex-direction: column;
                 cursor: pointer;
 
-                img {
+                svg {
                     margin-bottom: 4px;
                 }
+
+                &:hover {
+                    color: $color-primary-04;
+                    transition: .3s;
+
+                svg > path {
+                        fill: $color-primary-04;
+                    }
+                }
             }
+
         }
     }
  

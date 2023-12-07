@@ -90,6 +90,15 @@
                 font-size: 1.8rem;
                 font-weight: 600;    
                 letter-spacing: 0.27px;
+
+                &:hover, &:focus {
+                    color: $color-secondary-02;
+                    border: 1px solid $color-secondary-02;
+
+                    svg > path {
+                        fill: $color-secondary-02;
+                    }
+                }
             }
 
             &--destach {
