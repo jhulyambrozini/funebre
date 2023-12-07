@@ -18,7 +18,7 @@ body {
     min-height: 100vh;
 }
  
-.container {
+.container { 
     margin: 0 auto;
     padding: 0 188px;
     max-width: 1600px;
@@ -27,5 +27,12 @@ body {
     justify-content: space-between;
 }
 
+.section__title {
+    color: $color-secondary-01;
+    font-family: $font-primary;
+    font-size: 4.8rem;
+}
+
 @import 'header';
 @import 'about';
+@import 'services';
