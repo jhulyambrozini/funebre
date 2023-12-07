@@ -33,10 +33,17 @@ body {
     font-size: 4.8rem;
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @import 'header';
 @import 'about';
 @import 'services';
 @import 'plans';
 @import 'agencies';
+@import 'reviews';
  
  

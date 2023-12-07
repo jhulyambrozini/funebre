@@ -1,0 +1,46 @@
+.reviews {
+    flex-direction: column;
+    margin-top: 7.2rem;
+
+    .dividing-line {
+        width: 2px;
+        height: 212px;
+        background-color: $color-grey-07;
+        margin: 0 39px;
+    }
+
+    .custumer__reviews {
+        margin-top: 3.2rem;
+
+        &__container {
+            p {
+                color: $color-grey-02;
+                font-size: 1.8rem;
+                line-height: 28px; /* 155.556% */
+                width: 468px;
+                margin-top: 8px;
+            }
+    
+            &-infos {
+                justify-content: flex-start;
+    
+                > img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+    
+                h3 {
+                    color: $color-grey-01;
+                    font-size: 2.4rem;
+                    margin-bottom: 8px;
+                }
+    
+                &-rating {
+                    margin-left: 1.6rem;
+                }
+            }
+        } 
+    }  
+}

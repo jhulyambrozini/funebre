@@ -12,7 +12,7 @@
         padding-top: 1.7rem;
         padding-bottom: 1.7rem;
 
-        &-menu {
+        &__menu {
             display: flex;
             gap: 3.6rem;
             align-items: center;
@@ -23,7 +23,7 @@
                 cursor: pointer;
             }
 
-            a {
+            &-link {
                 padding: 16px 0;
                 display: inline-block;
                 text-decoration: none;
