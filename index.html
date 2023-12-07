@@ -43,9 +43,10 @@
                     <img src="./src/assets/images/hero.webp" alt="">
                 </picture>
                 <p>A assistência que você precisa nos momentos mais dificeis.</p>
-                <button>CONTRATE</button>
+                <button class="hire-button">CONTRATE</button>
             </div>
         </header>
+
         <section class="container about" id="about">
             <div>
                 <h2 class="section__title">Sobre</h2>
@@ -53,6 +54,7 @@
             </div>
             <img class="about__image" src="./src/assets/images/image-01.webp" alt="">
         </section>
+
         <section class="container services" id="services">
             <h2 class="section__title">Nossos Serviços</h2>
             <div class="services__cards">
@@ -81,6 +83,7 @@
                 </div>
             </div>
         </section>
+
         <section class="plans flex" id="plans">
             <h2 class="section__title">Nossos Planos</h2>
 
@@ -119,7 +122,7 @@
                         <li>Assistência 24h</li>
                         <li>Certidão de óbito</li>
                     </ul>
-                    <button class="plans__cards__container--destach-button">
+                    <button class="hire-button">
                         CONTRATE
                         <img src="./src/assets/icons/whatsapp-button-icon.svg" alt="">
                     </button>
@@ -148,6 +151,7 @@
                 </div>
             </div>
         </section>
+
         <section class="container agencies" id="agencies">
             <h2 class="section__title">Agências</h2>
 
@@ -189,6 +193,7 @@
                 </div>
             </div>
         </section>
+
         <section class="reviews flex">
             <h2 class="section__title">Avaliações</h2>
 
@@ -221,7 +226,82 @@
                     </p>
                 </div>
             </div>
+
+            <a href="" class="more__reviews-link">MAIS AVALIAÇÕES</a>
         </section>
+
+        <section class="container contact" id="contact">
+            <h2 class="section__title">Entre em Contato</h2>
+            <div class="contact__form flex">
+                <form>
+                    <div class="contact__form__inputs-group__container">
+                        <div class="contact__form__input-group ">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name">
+                            <small class="error-message"></small>
+                        </div>
+                        
+                        <div class="contact__form__input-group ">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="exemple@email.com">
+                            <small class="error-message">aaaaaaaa</small>
+                        </div>
+                    </div>
+
+                    <label for="message">Mensagem</label>
+                    <textarea name="messade" id="message" cols="30" rows="10" placeholder="Escreva aqui a sua mensagem"></textarea>
+
+                    <button class="hire-button" type="submit">ENVIAR MENSAGEM</button>
+                </form>
+                <img src="./src/assets/images/image-02.webp" alt="">
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="flex footer__infos">
+                <img src="./src/assets/images/logo-funebre.svg" alt="">
+                <div class="footer__social-medias">
+                    <h3>Redes sociais</h3>
+                    <div class="footer__social-medias__links flex">
+                        <a>
+                            <img src="./src/assets/icons/facebook-icon.svg" alt="">
+                            Facebook
+                        </a>
+        
+                        <a>
+                            <img src="./src/assets/icons/whatsapp-icon.svg" alt="">
+                            Whatsapp
+                        </a>
+        
+                        <a>
+                            <img src="./src/assets/icons/instagram-icon.svg" alt="">
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__phone">
+                    <h3>Telefones</h3>
+                    <div class="flex">
+                        <div class="footer__phone__container">
+                            <p>
+                                <img src="./src/assets/icons/phone-icon.svg" alt="">
+                                Rio de Janeiro
+                            </p>
+                            <span>(21) 99999-9999</span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="footer__phone__container">
+                            <p>
+                                <img src="./src/assets/icons/phone-icon.svg" alt="">
+                                São Paulo
+                            </p>
+                            <span>(11) 99999-9999</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <small>Funebre &copy; 2023. Alguns direitos reservados.</small>
+        </footer>
     </div>
 </body>
 </html>
