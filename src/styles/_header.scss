@@ -30,11 +30,11 @@
                 color: $color-grey-10;
                 font-size: 1.6rem;
 
-                &:hover {
+                &:hover, &:focus  {
                     color: $color-secondary-05;
                 }
 
-                &:hover::after {
+                &:hover::after, &:focus::after {
                     width: 100%;
                 }
 
@@ -67,7 +67,47 @@
         }
 
         button {
-            margin: 40px;
+            margin: 40px 0;
+        }
+    }
+
+    @media (max-width: 1025px) {
+        &__hero {
+            height: 412px;
+            img {
+                width: 740px;
+            }
+        }
+    }
+
+    @media (max-width: 426px) {
+        &__info {
+            font-size: 1rem;
+        }
+
+        &__nav {
+            a img {
+                width: 50px;
+                object-fit: cover;
+            }
+        }
+
+        &__hero {
+            height: 100%;
+            padding-bottom: 3.2rem;
+            img {
+                width: 100%;
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin: 0;
+            }
+
+            button {
+                margin: 0;
+                margin-top: 2.4rem;
+            }
         }
     }
 }

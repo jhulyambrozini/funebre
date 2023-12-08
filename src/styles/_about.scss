@@ -3,9 +3,8 @@
     margin-top: 7.2rem;
 
     &__image {
-        width: 704px;
         object-fit: cover;
-        filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.05));
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
         border-radius: 5px;
     }
 
@@ -13,8 +12,38 @@
         color: $color-grey-02;
         font-family: $font-secondary;
         font-size: 1.8rem;
-        line-height: 28px; /* 155.556% */
-        max-width: 495px;
+        line-height: 26px; 
+        min-width: 495px;
+        width: 100%;
         margin-top: 1.2rem;
     }
+
+    @media (max-width: 1025px) {
+        margin-top: 6rem;
+        &__image {
+            width: 400px;
+        }
+
+        &__desc {
+            font-size: 1.6rem;
+            line-height: 24px; 
+        }
+    }
+
+    @media (max-width: 426px) {
+        display: block;
+        margin-top: 4.8rem;
+
+        &__image {
+            display: none;
+        }
+
+        &__desc {
+            font-size: 1.4rem;
+            line-height: 22px;
+            min-width: 0;
+        }
+    }
+
+
 }

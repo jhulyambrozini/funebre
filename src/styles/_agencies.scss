@@ -5,17 +5,17 @@
     &__cards-container {
         margin-top: 3.2rem;
         display: flex;
-        gap: 24px;
+        gap: 70px;
+        justify-content: center;
     }
 
     &__card {
         background-color: $color-grey-10;
-        width: 600px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.10);
         border-radius: 5px;
 
         > img {
-            height: 340px;
+            height: 305px;
             object-fit: cover;
         }
 
@@ -62,12 +62,64 @@
                 &::after {
                     content: '';
                     display: block;
-                    height: 2px;
+                    height: 1px;
                     width: 100%;
                     background-color: $color-secondary-02;
                     margin-top: 4px;
                 }
             }
+        }
+
+        @media (max-width: 1025px) {
+            > img {
+                height: 250px;
+                object-fit: cover;
+            }
+
+            &-infos {
+                h3 {
+                    font-size: 1.8rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    line-height: 24px;
+                }
+
+                img {
+                    height: 10px;
+                    width: 8px;
+                    object-fit: cover;
+                }
+            }
+
+            &-link {
+                a {
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 426px) {
+        &__card {
+            > img {
+                width: 288px;
+                height: 138px;
+            }
+
+            &-infos {
+                padding: 1.2rem .8rem;
+                h3 {
+
+                }
+            }
+        }
+
+        &__cards-container {
+            flex-direction: column;
+            gap: 24px;
         }
     }
 }

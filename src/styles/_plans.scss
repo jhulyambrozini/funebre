@@ -1,7 +1,8 @@
 .plans {
-    margin-top: 7.2rem;
     flex-direction: column;
     position: relative;
+    margin: 0 auto;
+    margin-top: 7.2rem;
 
     &::before {
         background-color: #FFF8F4;
@@ -30,6 +31,8 @@
     
             &-title {
                 justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 12px;
     
                 h3 {
                     color: $color-secondary-01;
@@ -55,6 +58,7 @@
             &-list {
                 margin-top: 1.6rem;
                 margin-bottom: 1.8rem;
+
                 li {
                     list-style: none;
                     position: relative;
@@ -139,5 +143,44 @@
         }
     }
 
+    @media (max-width: 1025px) {
+        // padding: 0 6rem;
+        width: 100%;
+        &__cards__container {
+            width: 300px;
+            height: 358px;
 
+            &-title {
+                h3 {
+                    font-size: 2rem;
+                }
+
+                span {
+                    font-size: 1.8rem;
+                }
+
+                small {
+                    font-size: 1.2rem;
+                }
+            }
+
+            &-list {
+                li {
+                    font-size: 1.4rem;
+                    line-height: 24px;
+                }
+            }
+
+            &-button {
+                padding: .8rem 1.6rem;
+                font-size: 1.4rem;
+            }
+
+            &--destach {
+                width: 330px;
+                height: 375px;
+            }
+        }
+
+    }
 }

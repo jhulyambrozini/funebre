@@ -67,4 +67,60 @@
             background-color: $color-secondary-05;
         }
     }
+
+    @media (max-width: 1025px) {
+        margin-top: 6rem;
+
+        .custumer__reviews {
+            &__container {
+                p {
+                    font-size: 1.6rem;
+                    line-height: 24px;
+                    margin-top: 1.2rem;
+                }
+
+                &-infos {
+                    > img {
+                        width: 70px;
+                        height: 70px;
+                    }
+
+                    h3 {
+                        font-size: 1.8rem;
+                    }
+
+                    &-rating {
+                        img {
+                            height: 20px;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+
+    @media (max-width: 426px) {
+        margin-top: 4.8rem;
+        .custumer__reviews {
+            display: block;
+
+            &__container p {
+                width: 270px;
+            }
+
+            &__container:nth-child(1) {
+                margin-bottom: 2.4rem;
+            }
+        }
+
+        .dividing-line {
+            display: none;
+        }
+    }
+
+    .more__reviews-link {
+        font-size: 1.6rem;
+        margin-top: 3.2rem;
+    }
+
 }

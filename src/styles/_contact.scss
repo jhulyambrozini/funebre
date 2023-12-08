@@ -1,22 +1,24 @@
 .contact {
     flex-direction: column;
     align-items: center;
-    position: relative;
     margin-top: 12.2rem;
+    position: relative;
 
     &::before {
         content: '';
         background-color:#FFF8F4;;
-        display: block;
-        width: 550px;
-        height: 279px;
+        height: 228px;
+        width: 30vw;
         position: absolute;
-        bottom: 31px;
+        bottom: 30px;
         right: 0;
         z-index: -1;
     }
 
+
     &__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         margin-top: 4rem;
         gap: 80px;
 
@@ -39,7 +41,7 @@
         flex-direction: column;
        }
 
-        label {
+        form label {
             color: $color-grey-03;
             font-size: 1.8rem;
             margin-bottom: .8rem;
@@ -72,5 +74,64 @@
         font-size: 1.4rem;
         line-height: 24px; /* 171.429% */
         display: none;
+    }
+
+    @media (max-width: 1025px) {
+        &::before {
+            height: 50vh;
+        }
+
+        &__form {
+            gap: 40px;
+            img {
+                width: 500px;
+            }
+
+            textarea {
+                width: 400px;
+            }
+
+            &__inputs-group__container {
+                flex-direction: column;
+    
+                input {
+                    width: 400px;
+                }
+            }
+        } 
+    }
+
+    @media (max-width: 426px) {
+        margin-top: 8.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            display: none;
+        }
+        &__form {
+            margin-top: 3.2rem;
+            display: block;
+            img {
+                display: none;
+                opacity: 0;
+            }
+
+            textarea {
+                width: 285px;
+                height: 160px;
+            }
+
+            &__inputs-group__container {
+                input {
+                    width: 285px;
+                }
+            }
+
+            button {
+                margin-top: 4rem;
+            }
+        }
     }
 } 

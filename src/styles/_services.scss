@@ -4,6 +4,7 @@
 
     &__cards {
         display: flex;
+        flex-wrap: wrap;
         gap: 24px;
         margin-top: 3.2rem;
 
@@ -36,6 +37,37 @@
 
             &:hover {
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        &__cards {
+            &__container {
+                width: 312px;
+            }
+        }
+    }
+
+    @media (max-width: 426px) {
+        &__cards {
+            gap: 16px;
+            &__container {
+                width: 136px;
+                height: 204px;
+
+                img {
+                    height: 105px;
+                }
+
+                &-title {
+                    font-size: 1.8rem;
+                }
+
+                &-desc {
+                    display: none;
+                }
+
             }
         }
     }
