@@ -23,29 +23,49 @@
     <title>Funebre</title>
   </head>
   <body>
-    <div id="root">
       <header class="header">
         <div class="header__info container">
           <p>Abrimos de seg. à sex. das 9:00 ás 17:30</p>
         </div>
 
-        <nav class="header__nav container">
-          <a href="#">
-            <img src="./src/assets/images/logo-funebre.svg" alt="" />
-          </a>
-          <ul class="header__nav__menu">
-            <li><a class="header__nav__menu-link" href="#about">Sobre</a></li>
-            <li>
-              <a class="header__nav__menu-link" href="#services">Serviços</a>
-            </li>
-            <li><a class="header__nav__menu-link" href="#plans">Planos</a></li>
-            <li>
-              <a class="header__nav__menu-link" href="#agencies">Agências</a>
-            </li>
-            <li>
-              <a class="header__nav__menu-link" href="#contact">Contato</a>
-            </li>
-          </ul>
+        <nav >
+          <div class="header__nav container">
+            <a href="#">
+              <img src="./src/assets/images/logo-funebre.svg" alt="" />
+            </a>
+            <div class="menu-desktop">
+              <ul class="header__nav__menu">
+                <li><a class="header__nav__menu-link" href="#about">Sobre</a></li>
+                <li>
+                  <a class="header__nav__menu-link" href="#services">Serviços</a>
+                </li>
+                <li><a class="header__nav__menu-link" href="#plans">Planos</a></li>
+                <li>
+                  <a class="header__nav__menu-link" href="#agencies">Agências</a>
+                </li>
+                <li>
+                  <a class="header__nav__menu-link" href="#contact">Contato</a>
+                </li>
+              </ul>
+            </div>
+            <img class="menu-mobile-icon" src="./src/assets/icons/menu-mobile.svg" alt="">
+            
+          </div>
+          <div class="menu-mobile">
+            <ul class="header__nav__menu">
+              <li><a class="header__nav__menu-link" href="#about">Sobre</a></li>
+              <li>
+                <a class="header__nav__menu-link" href="#services">Serviços</a>
+              </li>
+              <li><a class="header__nav__menu-link" href="#plans">Planos</a></li>
+              <li>
+                <a class="header__nav__menu-link" href="#agencies">Agências</a>
+              </li>
+              <li>
+                <a class="header__nav__menu-link" href="#contact">Contato</a>
+              </li>
+            </ul>
+          </div>
         </nav>
         <div class="header__hero container">
           <picture>
@@ -119,7 +139,7 @@
         </div>
       </section>
 
-      <section class="plans flex container" id="plans">
+      <!-- <section class="plans flex container" id="plans">
         <h2 class="section__title">Nossos Planos</h2>
 
         <div class="plans__cards">
@@ -213,7 +233,7 @@
             </button>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="agencies flex container" id="agencies">
         <h2 class="section__title">Agências</h2>
@@ -417,6 +437,6 @@
         </div>
         <small>Funebre &copy; 2023. Alguns direitos reservados.</small>
       </footer>
-    </div>
+    <script src="./dist/js/main.js"></script>
   </body>
 </html>
