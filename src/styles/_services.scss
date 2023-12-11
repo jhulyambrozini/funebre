@@ -43,6 +43,7 @@
 
     @media screen and (max-width: 1025px) {
         &__cards {
+            justify-content: center;
             &__container {
                 width: 312px;
             }

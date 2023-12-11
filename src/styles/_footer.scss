@@ -98,6 +98,10 @@
            align-items: flex-start;
            gap: 34px;
            padding-top: 1.6rem;
+
+           > a img {
+                width: 50px;
+            }
         }
 
         h3 {
@@ -107,6 +111,14 @@
 
         &__social-medias__links {
             gap: 50px;
+
+            svg {
+                width: 28px;
+            }
+        }
+
+        small {
+            font-size: 1rem;
         }
     }
 }
