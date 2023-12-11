@@ -68,7 +68,7 @@ nav {
     display: flex;
 }
 
-@media (max-width: 1025px) {
+@media screen and (max-width: 1025px) {
     .container {
         padding: 0 6rem;
     }
@@ -78,7 +78,7 @@ nav {
     }
 }
 
-@media (max-width: 426px) {
+@media screen and (max-width: 426px) {
     .container {
         padding: 0 1.6rem;
         min-width: 320px;

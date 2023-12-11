@@ -12,7 +12,9 @@
         background-color: $color-primary-01;
         padding-top: 1.7rem;
         padding-bottom: 1.7rem;
-
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
         &__menu {
             display: flex;
             gap: 3.6rem;
@@ -54,11 +56,25 @@
 
     .menu-desktop {
         display: flex;
+        justify-content: end;
     }
 
-    .menu-mobile, .menu-mobile-icon {
-        display: none;
+    .menu-mobile, .menu-mobile-button {
+        opacity: 0;
+        display: block;
+        overflow: hidden;
      }
+
+     .menu-mobile {
+        transition: .5s;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        background-color: $color-primary-01;
+     }
+    
 
     &__hero {
         background-color: $color-primary-01;
@@ -79,7 +95,7 @@
         }
     }
 
-    @media only screen and (max-width: 1025px) {
+    @media screen and (max-width: 1025px) {
         &__hero {
             height: 412px;
             img {
@@ -88,7 +104,7 @@
         }
     }
 
-    @media only screen and (max-width: 426px) {
+    @media screen and (max-width: 426px) {
         &__info {
             font-size: 1rem;
         }
@@ -96,11 +112,16 @@
         &__nav {
             align-items: center;
             justify-content: space-between;
+            display: flex;
             
             a img {
                 width: 50px;
                 object-fit: cover;
             }
+
+            &__menu-link::after {
+                    display: none;
+               }
         }
 
         &__hero {
@@ -125,36 +146,33 @@
             display: none;
         }
 
-        .menu-mobile-icon {
-            display: block;
-            width: 40px;
+        .menu-mobile-button {
+            display: flex;
+            opacity: 1;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            background-color: transparent;
+            border: none;
         }
 
-        .menu-mobile {
-            display: flex;
-            justify-content: flex-end;
-            padding: 0;
-            background-color: $color-primary-01;
-        }
+        .menu-mobile.active {
+            opacity: 1;
+         }
 
         &__nav__menu {
-            display: none;
+            display: block;
             background-color: $color-primary-01;
             width: 100%;
-            text-align: end;
+            text-align: center;
             
            a {
-            font-size: 1.6rem;
-            padding: 0;
-            padding-bottom: 1.8rem;
-            padding-right: 1.6rem;
+                font-size: 1.5rem;
+                border-bottom: 2px solid $color-primary-02;
+                padding: .9rem 0;
+                width: 200px;
            }
-        }
-    }
- 
-    @keyframes menuMobile {
-        to {
-            transform: translateY(0);
         }
     }
 }

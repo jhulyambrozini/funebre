@@ -30,9 +30,11 @@
 
         <nav >
           <div class="header__nav container">
-            <a href="#">
-              <img src="./src/assets/images/logo-funebre.svg" alt="" />
-            </a>
+            <h1>
+              <a href="#">
+                <img src="./src/assets/images/logo-funebre.svg" alt="" />
+              </a>
+            </h1>
             <div class="menu-desktop">
               <ul class="header__nav__menu">
                 <li><a class="header__nav__menu-link" href="#about">Sobre</a></li>
@@ -48,11 +50,13 @@
                 </li>
               </ul>
             </div>
-            <img class="menu-mobile-icon" src="./src/assets/icons/menu-mobile.svg" alt="">
+            <button class="menu-mobile-button" aria-expanded="false" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu-mobile">
+              <img id="menu-mobile-icon" src="./src/assets/icons/menu-mobile.svg" alt="">
+            </button>
             
           </div>
-          <div class="menu-mobile">
-            <ul class="header__nav__menu">
+          <div class="menu-mobile" id="menu-mobile">
+            <ul class="header__nav__menu" role="menu">
               <li><a class="header__nav__menu-link" href="#about">Sobre</a></li>
               <li>
                 <a class="header__nav__menu-link" href="#services">Serviços</a>

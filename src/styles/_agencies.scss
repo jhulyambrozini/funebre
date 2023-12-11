@@ -70,7 +70,7 @@
             }
         }
 
-        @media (max-width: 1025px) {
+        @media screen and (max-width: 1025px) {
             > img {
                 height: 250px;
                 object-fit: cover;
@@ -102,7 +102,7 @@
         }
     }
 
-    @media (max-width: 426px) {
+    @media screen and (max-width: 426px) {
         &__card {
             > img {
                 width: 288px;
@@ -111,9 +111,6 @@
 
             &-infos {
                 padding: 1.2rem .8rem;
-                h3 {
-
-                }
             }
         }
 

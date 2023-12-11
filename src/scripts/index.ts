@@ -1,17 +1,42 @@
-const menuMobileIcon = document.querySelector('.menu-mobile-icon');
-const menuMobileLinks: HTMLUListElement | null = document.querySelector(
-  '.menu-mobile .header__nav__menu'
+const menuMobileButton: HTMLButtonElement | null = document.querySelector(
+  '.menu-mobile-button'
 );
+const menuMobileIcon: HTMLOrSVGImageElement | null =
+  document.querySelector('#menu-mobile-icon');
+const menuMobileList: HTMLDivElement | null =
+  document.querySelector('.menu-mobile');
 
-const exibemenulinks = () => {
-  console.log('clcik');
-  if (menuMobileLinks) {
-    if (menuMobileLinks.style.display === 'block') {
-      menuMobileLinks.style.display = 'none';
-    } else {
-      menuMobileLinks.style.display = 'block';
-    }
+const menuMobileLinks: NodeListOf<HTMLAnchorElement> =
+  document.querySelectorAll('.header__nav__menu-link');
+
+const exibemenulinks = (event: Event) => {
+  if (event.type === 'touchstart') event.preventDefault();
+  menuMobileList?.classList.toggle('active');
+  menuMobileButton?.setAttribute('aria-expanded', 'true');
+  if (menuMobileList?.classList.contains('active')) {
+    menuMobileButton?.setAttribute('aria-Label', 'Fechar menu');
+    menuMobileIcon?.setAttribute(
+      'src',
+      './src/assets/icons/close-menu-icon.svg'
+    );
+  } else {
+    menuMobileButton?.setAttribute('aria-expanded', 'false');
+    menuMobileIcon?.setAttribute('src', './src/assets/icons/menu-mobile.svg');
   }
 };
 
-menuMobileIcon?.addEventListener('click', exibemenulinks);
+const closeMenuList = () => {
+  if (menuMobileList?.classList.contains('active')) {
+    menuMobileList.classList.remove('active');
+    menuMobileButton?.setAttribute('aria-expanded', 'false');
+    menuMobileIcon?.setAttribute('src', './src/assets/icons/menu-mobile.svg');
+  }
+};
+
+menuMobileButton?.addEventListener('click', exibemenulinks);
+menuMobileButton?.addEventListener('touchstart', exibemenulinks);
+
+menuMobileLinks.forEach(item => {
+  item.addEventListener('touchstart', closeMenuList);
+  item.addEventListener('click', closeMenuList);
+});

@@ -99,7 +99,7 @@
         }
     }
 
-    @media (max-width: 426px) {
+    @media screen and (max-width: 426px) {
         margin-top: 4.8rem;
         .custumer__reviews {
             display: block;
