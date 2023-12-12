@@ -38,7 +38,7 @@ menuMobileButton?.addEventListener('click', exibemenulinks);
 menuMobileButton?.addEventListener('touchstart', exibemenulinks);
 
 menuMobileLinks.forEach(item => {
-  item.addEventListener('touchstart', closeMenuList);
+  // item.addEventListener('touchstart', closeMenuList);
   item.addEventListener('click', closeMenuList);
 });
 
