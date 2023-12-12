@@ -75,3 +75,30 @@ function updateSlider() {
     }
   }
 }
+
+////////////////////////////-----------SERVICES CARDS DESCRIPTIONS MOBILE------//////////////////////////////////////////
+const serviceCards: NodeListOf<HTMLDivElement> = document.querySelectorAll(
+  '.services__cards__container'
+);
+
+serviceCards.forEach(item => {
+  item.addEventListener('click', event => {
+    const element = event.currentTarget as HTMLDivElement;
+    const elementDescription = element.lastElementChild?.innerHTML;
+
+    const div = document.createElement('div');
+    div.setAttribute('class', 'description-focused');
+
+    if (elementDescription) div.innerHTML = elementDescription;
+
+    if (element.children.length === 3) {
+      element.appendChild(div);
+    } else {
+      const div = document.querySelectorAll('.description-focused')!;
+
+      div.forEach(elem => {
+        if (elem.innerHTML == elementDescription) element.removeChild(elem);
+      });
+    }
+  });
+});
