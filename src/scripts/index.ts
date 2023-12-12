@@ -122,20 +122,66 @@ const form = document.querySelector('form');
 const btnSubmit: HTMLButtonElement | null =
   document.querySelector('#btnSubmit');
 
+function isEmailValid(email: string) {
+  return /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(
+    email
+  );
+}
+
+function setErro(
+  inputGroup: HTMLElement,
+  messageErrorElement: Element,
+  message: string
+) {
+  inputGroup.classList.remove('success');
+  inputGroup.classList.add('error');
+  messageErrorElement.classList.remove('text-muted');
+  messageErrorElement.innerHTML = message;
+}
+
+function setSuccess(inputGroup: HTMLElement, messageErrorElement: Element) {
+  inputGroup.classList.remove('error');
+  inputGroup.classList.add('success');
+  messageErrorElement.classList.add('text-muted');
+}
 // validate form
 function validate(element: HTMLInputElement | HTMLTextAreaElement) {
   const messageErrorElement = element.nextElementSibling;
+  const inputGroup = element.parentElement;
 
-  if (messageErrorElement)
-    if (element.value === '') {
-      messageErrorElement.classList.remove('text-muted');
-      messageErrorElement.innerHTML = 'Preencha este campo.';
-      return false;
-    } else {
-      messageErrorElement.classList.add('text-muted');
-      return true;
+  if (messageErrorElement && inputGroup) {
+    if (element.id === 'email') {
+      if (element.value !== '' && isEmailValid(element.value)) {
+        setSuccess(inputGroup, messageErrorElement);
+      } else {
+        setErro(inputGroup, messageErrorElement, 'Preencha um email válido');
+      }
     }
-  return false;
+
+    if (element.id === 'name') {
+      if (element.value !== '') {
+        if (element.value.length > 3) {
+          setSuccess(inputGroup, messageErrorElement);
+        } else {
+          setErro(
+            inputGroup,
+            messageErrorElement,
+            'O nome precisa ter mais de 3 letras'
+          );
+        }
+      } else {
+        setErro(inputGroup, messageErrorElement, 'Campo obrigatório');
+      }
+    }
+
+    if (element.id === 'message') {
+      if (element.value !== '') {
+        setSuccess(inputGroup, messageErrorElement);
+      } else {
+        setErro(inputGroup, messageErrorElement, 'Campo obrigatório');
+      }
+    }
+  }
 }
 
 // validates the field when losing focus
@@ -166,7 +212,16 @@ form?.addEventListener('submit', event => {
     validate(inputName);
     validate(textarea);
 
-    if (validate(inputEmail) && validate(inputName) && validate(textarea)) {
+    const inputGroupEmail = inputEmail.parentElement;
+    const inputGroupName = inputName.parentElement;
+    const inputGroupTextare = textarea.parentElement;
+
+    const inputsValid =
+      inputGroupEmail?.classList.contains('success') ||
+      inputGroupName?.classList.contains('success') ||
+      inputGroupTextare?.classList.contains('success');
+
+    if (inputsValid) {
       btnSubmit.disabled = true;
       btnSubmit.innerHTML = 'ENVIANDO...';
 
@@ -177,6 +232,10 @@ form?.addEventListener('submit', event => {
         inputEmail.value = '';
         inputName.value = '';
         textarea.value = '';
+
+        inputGroupEmail?.classList.remove('success');
+        inputGroupName?.classList.remove('success');
+        inputGroupTextare?.classList.remove('success');
       }, 3000);
     }
   }

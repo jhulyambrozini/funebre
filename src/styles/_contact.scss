@@ -45,7 +45,24 @@
         .text-muted {
             display: none;
         }
-       }
+
+        i img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 38px;
+            left: 220px;
+            visibility: hidden;
+        }
+    }
+
+    .error i .img-error {
+        visibility: visible;
+    }
+    
+    .success i .img-success {
+        visibility: visible;
+    }
 
         form label {
             color: $color-grey-03;
@@ -65,7 +82,6 @@
         textarea {
             width: 520px;
             height: 125px;
-            margin-top: .8rem;
             resize: none;
         }
 
@@ -108,6 +124,11 @@
                     width: 400px;
                 }
             }
+            &__input-group {
+                i img {
+                    left: 370px;
+                }
+            }
         } 
     }
 
@@ -123,7 +144,8 @@
         &__form {
             margin-top: 3.2rem;
             display: block;
-            img {
+
+            > img {
                 display: none;
                 opacity: 0;
             }
@@ -137,6 +159,10 @@
                 input {
                     width: 285px;
                 }
+            }
+
+            &__input-group i img {
+                left: 255px;
             }
 
             button {
