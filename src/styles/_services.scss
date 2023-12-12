@@ -51,6 +51,7 @@
     }
 
     @media screen and (max-width: 426px) {
+        align-items: center;
         &__cards {
             gap: 16px;
             &__container {

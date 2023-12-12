@@ -38,7 +38,6 @@ menuMobileButton?.addEventListener('click', exibemenulinks);
 menuMobileButton?.addEventListener('touchstart', exibemenulinks);
 
 menuMobileLinks.forEach(item => {
-  // item.addEventListener('touchstart', closeMenuList);
   item.addEventListener('click', closeMenuList);
 });
 
@@ -68,10 +67,10 @@ prevButton?.addEventListener('click', () => {
 function updateSlider() {
   if (carouselContainer) {
     if (currentIndex === 2) {
-      let newPosition = 230;
+      let newPosition = 280;
       carouselContainer.style.transform = `translateX(${newPosition}px)`;
     } else {
-      let newPosition = -currentIndex * 230;
+      let newPosition = -currentIndex * 280;
       carouselContainer.style.transform = `translateX(${newPosition}px)`;
     }
   }

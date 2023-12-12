@@ -62,15 +62,15 @@
     .menu-mobile, .menu-mobile-button {
         opacity: 0;
         display: none;
-        overflow: hidden;
      }
 
      .menu-mobile {
-        transition: .5s;
+        transition: .3s;
         position: absolute;
         width: 100%;
         height: 100vh;
         background-color: $color-primary-01;
+        display: block;
      }
     
 
@@ -158,7 +158,6 @@
 
         .menu-mobile.active {
             opacity: 1;
-            display: block;
          }
 
         &__nav__menu {
@@ -167,11 +166,12 @@
             width: 100%;
             text-align: center;
             
-           a {
+            &-link {
                 font-size: 1.5rem;
                 border-bottom: 2px solid $color-primary-02;
-                padding: .9rem 0;
+                padding: 1.4rem 0;
                 width: 200px;
+                text-align: center;
            }
         }
     }
