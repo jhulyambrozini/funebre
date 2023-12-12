@@ -42,7 +42,7 @@ menuMobileLinks.forEach(item => {
   item.addEventListener('click', closeMenuList);
 });
 
-////////////////////////////-----------CAROULSE PLANS------//////////////////////////////////////////
+////////////////////////////-----------CAROULSEl PLANS------//////////////////////////////////////////
 const nextButton = document.querySelector('#next-button');
 const prevButton = document.querySelector('#prev-button');
 const carouselItems: NodeListOf<HTMLDivElement> =
