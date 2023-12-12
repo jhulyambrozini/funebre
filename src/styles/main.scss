@@ -19,10 +19,15 @@ body {
     background-color: $color-grey-10;
     font-family: $font-secondary;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 nav {
     background-color: $color-primary-01;
+}
+
+p {
+    text-wrap: pretty;
 }
  
 .container { 

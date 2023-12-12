@@ -32,13 +32,19 @@
 
         &__inputs-group__container {
             display: flex;
-            gap: 20px;
-            margin-bottom: 2.8rem;
+            gap: 8px;
+            margin-bottom: .8rem;
         }
 
        &__input-group {
         display: flex;
         flex-direction: column;
+        min-height: 92px;
+        position: relative;
+
+        .text-muted {
+            display: none;
+        }
        }
 
         form label {
@@ -54,7 +60,7 @@
             width: 250px;
             padding: 10px 12px; 
             font-family: $font-secondary;
-        } 
+        }
 
         textarea {
             width: 520px;
@@ -63,17 +69,21 @@
             resize: none;
         }
 
+        input:focus, textarea:focus {
+            border: none;
+            outline: 1px solid $color-secondary-01;
+        }
+
+        small.error-message {
+            color: $color-error;
+            font-family: $font-secondary;
+            font-size: 1.4rem;
+            line-height: 24px; /* 171.429% */
+        }
+
         button {
             margin-top: 3.2rem;
         }
-    }
-
-    .error-message {
-        color: $color-error;
-        font-family: $font-secondary;
-        font-size: 1.4rem;
-        line-height: 24px; /* 171.429% */
-        display: none;
     }
 
     @media screen and (max-width: 1025px) {

@@ -102,3 +102,82 @@ serviceCards.forEach(item => {
     }
   });
 });
+
+////////////////////////////-----------MORE REVIEWS------//////////////////////////////////////////
+const moreReviews = document.querySelector('.more__reviews-items');
+const moreReviewsButton = document.querySelector('.more__reviews-button');
+
+moreReviewsButton?.addEventListener('click', () => {
+  if (moreReviews?.classList.contains('active')) {
+    moreReviews?.classList.remove('active');
+    moreReviewsButton.innerHTML = 'MAIS AVALIAÇÕES';
+  } else {
+    moreReviews?.classList.add('active');
+    moreReviewsButton.innerHTML = 'MOSTRAR MENOS';
+  }
+});
+
+////////////////////////////-----------VALIDAÇÃO DO FORM------//////////////////////////////////////////
+const form = document.querySelector('form');
+const btnSubmit: HTMLButtonElement | null =
+  document.querySelector('#btnSubmit');
+
+// validate form
+function validate(element: HTMLInputElement | HTMLTextAreaElement) {
+  const messageErrorElement = element.nextElementSibling;
+
+  if (messageErrorElement)
+    if (element.value === '') {
+      messageErrorElement.classList.remove('text-muted');
+      messageErrorElement.innerHTML = 'Preencha este campo.';
+      return false;
+    } else {
+      messageErrorElement.classList.add('text-muted');
+      return true;
+    }
+  return false;
+}
+
+// validates the field when losing focus
+document.addEventListener(
+  'blur',
+  function (e: FocusEvent) {
+    const target = e.target as HTMLElement;
+    if (
+      target instanceof HTMLInputElement ||
+      target instanceof HTMLTextAreaElement
+    ) {
+      validate(target);
+    }
+  },
+  true
+);
+
+form?.addEventListener('submit', event => {
+  event.preventDefault();
+
+  const inputName: HTMLInputElement | null = document.querySelector('#name');
+  const inputEmail: HTMLInputElement | null = document.querySelector('#email');
+  const textarea: HTMLTextAreaElement | null =
+    document.querySelector('#message');
+
+  if (inputEmail && inputName && textarea && btnSubmit) {
+    validate(inputEmail);
+    validate(inputName);
+    validate(textarea);
+
+    if (validate(inputEmail) && validate(inputName) && validate(textarea)) {
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML = 'ENVIANDO...';
+
+      setTimeout(function () {
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = 'MENSAGEM ENVIADA!';
+
+        inputEmail.value = '';
+        inputName.value = '';
+        textarea.value = '';
+      }, 3000);
+    }
+  }
+});

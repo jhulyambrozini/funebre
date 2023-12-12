@@ -10,7 +10,7 @@
 
         &__container {
             flex-direction: column;
-            width: 288px;
+            width: 280px;
             height: 303px;
             border-radius: 5px;
             background: $color-grey-10;
@@ -43,18 +43,7 @@
     }
 
     .description-focused {
-        background-color: rgb(112, 59, 9);
-        position: absolute;
-        height: 100%;
-        border-radius: 5px;
-        color: $color-grey-08;
-        font-size: 1.4rem;
-        line-height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto; 
-        padding: 0 1.6rem;
+        display: none;
     }
 
     @media screen and (max-width: 1025px) {
@@ -68,6 +57,23 @@
 
     @media screen and (max-width: 426px) {
         align-items: center;
+
+        .description-focused {
+            background-color: rgb(112, 59, 9);
+            position: absolute;
+            height: 100%;
+            border-radius: 5px;
+            color: $color-grey-08;
+            font-size: 1.4rem;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto; 
+            padding: 0 1.6rem;
+        }
+    
+
         &__cards {
             gap: 16px;
 
