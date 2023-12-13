@@ -111,6 +111,7 @@
 
         .custumer__reviews {
             &__container {
+                max-width: 300px;
                 &:nth-child(1) {
                     margin-bottom: 3.2rem;
                 }

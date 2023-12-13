@@ -1,16 +1,17 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
 const ts = require('gulp-typescript');
+const tsProject = ts.createProject('tsconfig.json');
 
 gulp.task('scripts', () => {
-  return gulp
-    .src('./src/scripts/*.ts')
-    .pipe(
-      ts({
-        noImplicitAny: false,
-        outFile: 'main.js',
-      })
-    )
+  return tsProject
+    .src()
+    .pipe(tsProject())
+    .on('error', () => {})
+    .pipe(uglify())
+    .pipe(concat('scripts.js'))
     .pipe(gulp.dest('./dist/js'));
 });
 

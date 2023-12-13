@@ -85,10 +85,13 @@
                 border: 1px solid $color-secondary-01;
                 border-radius: 5px;
                 gap: 8px;
+
+                display: flex;
+                justify-content: center;
+                text-align: center;
     
                 background-color: transparent;
                 color: $color-secondary-01;
-                text-align: center;
                 font-family: $font-primary;
                 font-size: 1.8rem;
                 font-weight: 600;    
