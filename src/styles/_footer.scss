@@ -91,6 +91,16 @@
     small {
         color: $color-grey-06;
         font-size: 1.2rem;
+
+        a {
+            color: $color-grey-06;
+            text-decoration: none;
+
+            &:hover, &:focus, &:visited {
+                color: $color-primary-05;
+                text-decoration: none;
+            }
+        }
     }
 
     @media screen and (max-width: 426px) {
