@@ -62,7 +62,7 @@ p {
     font-weight: 600;
     letter-spacing: 0.3px;
     border: none;
-    cursor: pointer;
+    cursor: pointer !important;
 
     &:hover, &:focus {
         background: linear-gradient(180deg, #BE4400 0%, #FF9B62 100%);
