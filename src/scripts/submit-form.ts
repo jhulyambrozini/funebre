@@ -41,10 +41,12 @@ function formSubmit(event: SubmitEvent) {
 
 function simulateApiCalls(params: simulateApiCallsParams) {
   submitButton.disabled = true;
+  submitButton.setAttribute('aria-disabled', 'true');
   submitButton.innerHTML = 'ENVIANDO...';
 
   setTimeout(function () {
     submitButton.disabled = false;
+    submitButton.setAttribute('aria-disabled', 'false');
     submitButton.innerHTML = 'MENSAGEM ENVIADA!';
 
     params.inputEmail.value = '';
@@ -68,6 +70,8 @@ function setErro(
   messageErrorElement: Element,
   message: string
 ) {
+  const input = inputGroup.children.item(1);
+  input.ariaInvalid = 'true';
   inputGroup.classList.remove('success');
   inputGroup.classList.add('error');
   messageErrorElement.classList.remove('text-muted');
@@ -75,6 +79,8 @@ function setErro(
 }
 
 function setSuccess(inputGroup: HTMLElement, messageErrorElement: Element) {
+  const input = inputGroup.children.item(1);
+  input.ariaInvalid = 'false';
   inputGroup.classList.remove('error');
   inputGroup.classList.add('success');
   messageErrorElement.classList.add('text-muted');

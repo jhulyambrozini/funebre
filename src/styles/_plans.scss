@@ -198,6 +198,7 @@
 
         &__cards {
             display: none;
+            visibility: hidden;
         }
         &__cards__container, &__cards__container--destach {
             width: 280px;

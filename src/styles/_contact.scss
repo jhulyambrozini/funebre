@@ -37,32 +37,54 @@
         }
 
        &__input-group {
-        display: flex;
-        flex-direction: column;
-        min-height: 92px;
-        position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 92px;
+            position: relative;
 
-        .text-muted {
-            display: none;
+            .text-muted {
+                display: none;
+                visibility: hidden;
+            }
+
+            i img {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 38px;
+                left: 220px;
+                visibility: hidden;
+            }
         }
 
-        i img {
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            top: 38px;
-            left: 220px;
-            visibility: hidden;
+        &__input-group:has(textarea){
+            i img {
+                left: 480px;
+            }
         }
-    }
 
-    .error i .img-error {
-        visibility: visible;
-    }
-    
-    .success i .img-success {
-        visibility: visible;
-    }
+        .error i .img-error {
+            visibility: visible;
+        }
+
+        .error input, .error textarea {
+            border: 1px solid $color-error;
+        }
+
+        .error input:focus, .error textarea:focus{
+            outline: 1px solid $color-error;
+        }
+        
+        .success i .img-success {
+            visibility: visible;
+        }
+
+        .success input, .success textarea {
+            border: 1px solid $color-success;
+        }
+        .success input:focus, .success textarea:focus{
+            outline: 1px solid $color-success;
+        }
 
         form label {
             color: $color-grey-03;
@@ -80,7 +102,7 @@
         }
 
         textarea {
-            width: 520px;
+            width: 100%;
             height: 125px;
             resize: none;
         }
@@ -90,7 +112,11 @@
             outline: 1px solid $color-secondary-01;
         }
 
-        small.error-message {
+        input:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 30px $color-grey-10 inset;
+        }
+
+        small {
             color: $color-error;
             font-family: $font-secondary;
             font-size: 1.4rem;
@@ -99,6 +125,10 @@
 
         button {
             margin-top: 3.2rem;
+
+            &:disabled {
+                background: linear-gradient(180deg, #ff975b 0%, #ff7e38 100%);
+            }
         }
     }
 
@@ -125,6 +155,11 @@
                 }
             }
             &__input-group {
+                i img {
+                    left: 370px;
+                }
+            }
+            &__input-group:has(textarea){
                 i img {
                     left: 370px;
                 }
@@ -163,6 +198,12 @@
 
             &__input-group i img {
                 left: 255px;
+            }
+
+            &__input-group:has(textarea){
+                i img {
+                    left: 255px;
+                }
             }
 
             button {

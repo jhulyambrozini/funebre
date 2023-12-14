@@ -44,6 +44,7 @@
 
     .description-focused {
         display: none;
+        visibility: hidden;
     }
 
     @media screen and (max-width: 1025px) {
@@ -58,7 +59,7 @@
     @media screen and (max-width: 426px) {
         align-items: center;
 
-        .description-focused {
+        .description-focused.active {
             background-color: rgb(112, 59, 9);
             position: absolute;
             height: 100%;
@@ -71,6 +72,7 @@
             justify-content: center;
             margin: 0 auto; 
             padding: 0 1.6rem;
+            visibility: visible;
         }
     
 

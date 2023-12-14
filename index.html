@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="description" content="Nossa funerária está aqui desde de 1920 para cuidar de todos os detalhes, com assistência completa à família. Proporcionamos com qualidade, a última homenagem a memória do seu ente querido.">
+
     <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,11 +15,10 @@
       rel="stylesheet"
     />
 
-
     <!--favicon-->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/images/favicon-128x128.ico">
+    <link rel="icon" type="img/png" sizes="32x32" href="./src/assets/images/favicon-32x32.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/images/favicon-16x16.ico">
 
     <link rel="stylesheet" href="./dist/css/main.css" />
     <title>Funebre</title>
@@ -71,6 +72,7 @@
             </ul>
           </div>
         </nav>
+
         <div class="header__hero container">
           <picture>
             <source
@@ -96,6 +98,7 @@
             burocráticos junto ao cartório.
           </p>
         </div>
+
         <img
           class="about__image"
           src="./src/assets/images/image-01.webp"
@@ -105,40 +108,49 @@
 
       <section class="services container" id="services">
         <h2 class="section__title">Nossos Serviços</h2>
+
         <div class="services__cards">
-          <div class="services__cards__container flex">
+          
+          <div class="services__cards__container flex" tabindex="0" role="group" aria-label="Cremação">
             <img src="./src/assets/icons/urn-icon.svg" alt="icone de uma urna funerária" />
             <h3 class="services__cards__container-title">Cremação</h3>
             <p class="services__cards__container-desc">
               Uma alternativa ecológica e econômica, reduzindo o corpo a cinzas.
             </p>
+            <div class="description-focused">Uma alternativa ecológica e econômica, reduzindo o corpo a cinzas.</div>
           </div>
 
-          <div class="services__cards__container flex">
-            <img src="./src/assets/icons/guirland-icon.svg" alt="Icone de uma guirlanda de flores" />
-            <h3 class="services__cards__container-title">Guirlanda Florida</h3>
+          <div class="services__cards__container flex" tabindex="0" role="group" aria-label="coroa de flores">
+            <img src="./src/assets/icons/guirland-icon.svg" alt="Icone de uma coroa de flores" />
+            <h3 class="services__cards__container-title">Coroa Florida</h3>
             <p class="services__cards__container-desc">
               Faça uma grande homenagem para quem partiu com uma coroa de
               flores, demostrando carinho.
             </p>
+            <div class="description-focused">Faça uma grande homenagem para quem partiu com uma coroa de
+              flores, demostrando carinho.</div>
           </div>
 
-          <div class="services__cards__container flex">
-            <img src="./src/assets/icons/plans-icon.svg" alt="Icone de uma vela dentro de uma faixa de luto" />
+          <div class="services__cards__container flex" tabindex="0" role="group" aria-label="planos funerários">
+            <img src="./src/assets/icons/plans-icon.svg" alt="Icone de uma vela dentro de uma faixa de luto, algumas flores estão ao redor da faixa." />
             <h3 class="services__cards__container-title">Planos Acessíveis</h3>
             <p class="services__cards__container-desc">
               Planos acessivéis, para que todos os seus entes queridos recebam
               um sepultamento de qualidade.
             </p>
+            <div class="description-focused">Planos acessivéis, para que todos os seus entes queridos recebam
+              um sepultamento de qualidade.</div>
           </div>
 
-          <div class="services__cards__container flex">
+          <div class="services__cards__container flex" tabindex="0" role="group" aria-label="Certidão de óbito ">
             <img src="./src/assets/icons/document-icon.svg" alt="Icone de uma certidão de óbito" />
             <h3 class="services__cards__container-title">Cartório</h3>
             <p class="services__cards__container-desc">
               Nossa equipe cuidará de todos os trâmites necessários para
               obtenção da certidão de óbito.
             </p>
+            <div class="description-focused">Nossa equipe cuidará de todos os trâmites necessários para
+              obtenção da certidão de óbito.</div>
           </div>
         </div>
       </section>
@@ -148,7 +160,7 @@
 
         <div class="plans__carousel-mobile">
           <div class="plans__carousel-mobile__items">
-            <div class="plans__cards__container carousel-item">
+            <div class="plans__cards__container carousel-item" role="group" aria-label="Plano vida single">
               <div class="plans__cards__container-title flex">
                 <h3>VIDA SINGLE</h3>
                 <span><sup>R$</sup>49,90<small>/mês</small></span>
@@ -182,7 +194,7 @@
               </button>
             </div>
   
-            <div class="plans__cards__container--destach carousel-item">
+            <div class="plans__cards__container--destach carousel-item" role="group" aria-label="Plano vida plus">
               <div class="plans__cards__container-title flex">
                 <h3>VIDA PLUS</h3>
                 <span><sup>R$</sup>69,90<small>/mês</small></span>
@@ -210,7 +222,7 @@
               />
             </div>
   
-            <div class="plans__cards__container carousel-item">
+            <div class="plans__cards__container carousel-item" role="group" aria-label="Plano vida master">
               <div class="plans__cards__container-title flex">
                 <h3>VIDA MASTER</h3>
                 <span><sup>R$</sup>89,90<small>/mês</small></span>
@@ -251,7 +263,7 @@
         </div>
        
         <div class="plans__cards">
-          <div class="plans__cards__container">
+          <div class="plans__cards__container" role="group" aria-label="Plano vida single">
             <div class="plans__cards__container-title flex">
               <h3>VIDA SINGLE</h3>
               <span><sup>R$</sup>49,90<small>/mês</small></span>
@@ -285,7 +297,7 @@
             </button>
           </div>
 
-          <div class="plans__cards__container--destach">
+          <div class="plans__cards__container--destach" role="group" aria-label="Plano vida plus">
             <div class="plans__cards__container-title flex">
               <h3>VIDA PLUS</h3>
               <span><sup>R$</sup>69,90<small>/mês</small></span>
@@ -313,7 +325,7 @@
             />
           </div>
 
-          <div class="plans__cards__container">
+          <div class="plans__cards__container" role="group" aria-label="Plano vida master">
             <div class="plans__cards__container-title flex">
               <h3>VIDA MASTER</h3>
               <span><sup>R$</sup>89,90<small>/mês</small></span>
@@ -353,7 +365,7 @@
         <h2 class="section__title">Agências</h2>
 
         <div class="agencies__cards-container">
-          <div class="agencies__card">
+          <div class="agencies__card" role="group" aria-label="Agência em São Paulo">
             <img src="./src//assets/images/agencia-sp.webp" alt="Fachada de um prédio branco de arquitetura antiga" />
             <div class="agencies__card-infos">
               <div>
@@ -373,7 +385,7 @@
             </div>
           </div>
 
-          <div class="agencies__card">
+          <div class="agencies__card" role="group" aria-label="Agência no Rio de Janeiro">
             <img src="./src/assets/images/agencia-rj.webp" alt="Fachada de um prédio amarelo de arquitetura antiga ao fundo de um jardim." />
             <div class="agencies__card-infos">
               <div>
@@ -400,7 +412,7 @@
 
         <div class="custumer__reviews">
           <div class="flex">
-            <div class="custumer__reviews__container">
+            <div class="custumer__reviews__container" role="group" aria-label="Avaliação de cliente">
               <div class="custumer__reviews__container-infos flex">
                 <img src="./src/assets/images/pessoa-02.jpg" alt="Mulher branca de cabelo castanho claro sorrindo." />
                 <div class="custumer__reviews__container-infos-rating">
@@ -417,7 +429,7 @@
   
             <div class="dividing-line"></div>
   
-            <div class="custumer__reviews__container">
+            <div class="custumer__reviews__container" role="group" aria-label="Avaliação de cliente">
               <div class="custumer__reviews__container-infos flex">
                 <img src="./src/assets/images/pessoa-01.jpg" alt="Homem branco de cabelo escuro sorrindo." />
                 <div class="custumer__reviews__container-infos-rating">
@@ -431,8 +443,8 @@
             </div>
           </div>
 
-          <div class="more__reviews-items">
-            <div class="custumer__reviews__container">
+          <div class="more__reviews-items" id="more-reviews">
+            <div class="custumer__reviews__container" role="group" aria-label="Avaliação de cliente">
               <div class="custumer__reviews__container-infos flex">
                 <img src="./src/assets/images/pessoa-03.jpg" alt="Mulher de cabelo preto e pele escura sorrindo." />
                 <div class="custumer__reviews__container-infos-rating">
@@ -447,7 +459,7 @@
   
             <div class="dividing-line"></div>
   
-            <div class="custumer__reviews__container">
+            <div class="custumer__reviews__container" role="group" aria-label="Avaliação de cliente">
               <div class="custumer__reviews__container-infos flex">
                 <img src="./src/assets/images/pessoa-04.jpg" alt="Homem de cabelo escuro e pele clara." />
                 <div class="custumer__reviews__container-infos-rating">
@@ -462,7 +474,7 @@
           </div>
         </div>
 
-        <button href="" class="more__reviews-button">MAIS AVALIAÇÕES</button>
+        <button class="more__reviews-button" aria-expanded="false" aria-controls="more-reviews">MAIS AVALIAÇÕES</button>
       </section>
 
       <section class="contact container" id="contact">
@@ -472,8 +484,14 @@
             <div class="contact__form__inputs-group__container">
               <div class="contact__form__input-group">
                 <label for="name">Nome</label>
-                <input type="text" id="name"/>
-                <small class="error-message text-muted"></small>
+                <input
+                  type="text"
+                  id="name" required
+                  aria-invalid="false"
+                  aria-required="true"
+                  aria-errormessage="name-error-message"
+                />
+                <small id="name-error-message" class="text-muted"></small>
                 <i>
                   <img class="img-success" src="./src/assets/icons/sucess-icon.svg" alt="Icone de sucesso">
                 </i>
@@ -488,8 +506,12 @@
                   type="email"
                   id="email"
                   placeholder="exemple@email.com"
+                  required
+                  aria-required="true"
+                  aria-invalid="false"
+                  aria-errormessage="email-error-message"
                 />
-                <small class="error-message text-muted"></small>
+                <small id="email-error-message" class="text-muted"></small>
                 <i>
                   <img class="img-success" src="./src/assets/icons/sucess-icon.svg" alt="Icone de sucesso">
                 </i>
@@ -506,8 +528,12 @@
                 id="message"
                 rows="10"
                 placeholder="Escreva aqui a sua mensagem"
+                required
+                aria-required="true"
+                aria-invalid="false"
+                aria-errormessage="textarea-error-message"
               ></textarea>
-              <small class="error-message text-muted"></small>
+              <small id="textarea-error-message" class="text-muted"></small>
               <i>
                 <img class="img-success" src="./src/assets/icons/sucess-icon.svg" alt="Icone de sucesso">
               </i>
@@ -516,7 +542,7 @@
               </i>
             </div>
 
-            <button class="hire-button" type="submit" id="btnSubmit">ENVIAR MENSAGEM</button>
+            <button class="hire-button" type="submit" id="btnSubmit" aria-disabled="false">ENVIAR MENSAGEM</button>
           </form>
           <img src="./src/assets/images/image-02.webp" alt="Diversas pessoas de costas se abraçando" />
         </div>
@@ -530,7 +556,7 @@
           <div class="footer__social-medias">
             <h3>Redes sociais</h3>
             <div class="footer__social-medias__links flex">
-              <a href="#">
+              <a href="#" title="Ir para facebook">
                 <i>
                   <svg
                     width="32"
@@ -548,7 +574,7 @@
                 Facebook
               </a>
 
-              <a href="#">
+              <a href="#" title="Ir para whatsapp">
                 <i>
                   <svg
                     width="32"
@@ -566,7 +592,7 @@
                 Whatsapp
               </a>
 
-              <a href="#">
+              <a href="#" title="Ir para instagram">
                 <i>
                   <svg
                   width="32"

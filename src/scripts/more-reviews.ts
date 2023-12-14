@@ -5,9 +5,11 @@ function toggleMoreReviews() {
   if (moreReviewsItems?.classList.contains('active')) {
     moreReviewsItems?.classList.remove('active');
     moreReviewsButton.innerHTML = 'MAIS AVALIAÇÕES';
+    moreReviewsButton.ariaExpanded = 'false';
   } else {
     moreReviewsItems?.classList.add('active');
     moreReviewsButton.innerHTML = 'MOSTRAR MENOS';
+    moreReviewsButton.ariaExpanded = 'true';
   }
 }
 
