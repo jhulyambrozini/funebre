@@ -2,7 +2,7 @@
 
 Site para uma funerária ficticia.
 
-Confira o layout em: [Layout Figma](https://www.figma.com/file/jZU3c56nRaebydUsiLNXjj/funebre?type=design&node-id=10%3A2&mode=design&t=zfLMR6rn0LuWi1tG-1')
+Confira o layout em: [Layout Figma](https://www.figma.com/file/jZU3c56nRaebydUsiLNXjj/funebre?type=design&node-id=20%3A2&mode=design&t=d918RgUMRb4P6zoW-1)
 O site está disponível online em: [Funebre](https://funebre.vercel.app/)
 
 ## Tecnologias utilizadas
