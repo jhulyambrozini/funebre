@@ -14,14 +14,13 @@ nextButton?.addEventListener('click', nextSlide);
 
 prevButton?.addEventListener('click', prevSlide);
 
-window.addEventListener('touchstart', e => {
+carouselContainer.addEventListener('touchstart', e => {
   touchStartX = e.touches[0].clientX;
 
   moving = true;
 });
 
-window.addEventListener('touchmove', e => {
-  // console.log(e.target);
+carouselContainer.addEventListener('touchmove', e => {
   if (moving) {
     if (touchStartX === null) return;
 
