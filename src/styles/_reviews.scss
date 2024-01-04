@@ -49,20 +49,33 @@
     }
 
     .more__reviews-button {
-        text-decoration: none;
-        color: $color-secondary-02;
+        margin-top: 6rem;     
         font-size: 2rem;
-        margin-top: 6rem;
-        background-color: transparent;
-        border: none;
-        padding-bottom: 4px;
-        border-bottom: 1px solid $color-secondary-02;
-        cursor: pointer;
 
-        &:hover {
-            color: $color-secondary-05;
-            border-bottom-color: $color-secondary-05;
-        }
+        border: none;
+                cursor: pointer;
+                padding: .8rem 1.6rem;
+                border: 1px solid $color-secondary-01;
+                border-radius: 5px;
+                gap: 8px;
+
+                display: flex;
+                justify-content: center;
+                text-align: center;
+    
+                background-color: transparent;
+                color: $color-secondary-01;
+                font-family: $font-primary;
+                font-size: 1.8rem;
+                font-weight: 600;    
+                letter-spacing: 0.27px;
+
+                &:hover, &:focus {
+                    color: $color-secondary-02;
+                    border: 1px solid $color-secondary-02;
+
+                    
+                }
     }
 
     .more__reviews-items {
@@ -118,7 +131,6 @@
 
                 p {
                     width: 100%;
-                    font-size: 1.4rem;
                     line-height: 22px;
                 }
 

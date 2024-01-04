@@ -58,6 +58,7 @@
         }
 
         &__input-group:has(textarea){
+            height: 200px;
             i img {
                 left: 480px;
             }
@@ -124,8 +125,6 @@
         }
 
         button {
-            margin-top: 3.2rem;
-
             &:disabled {
                 background: linear-gradient(180deg, #ff975b 0%, #ff7e38 100%);
             }
@@ -201,13 +200,14 @@
             }
 
             &__input-group:has(textarea){
+                height: 220px;
                 i img {
                     left: 255px;
                 }
             }
 
             button {
-                margin-top: 4rem;
+                margin-top: 1.5rem;
             }
         }
     }
