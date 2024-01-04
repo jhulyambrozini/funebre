@@ -2,14 +2,14 @@ const moreReviewsItems = document.querySelector('.more__reviews-items');
 const moreReviewsButton = document.querySelector('.more__reviews-button');
 
 function toggleMoreReviews() {
+  moreReviewsItems.classList.toggle('active');
+
   if (moreReviewsItems?.classList.contains('active')) {
-    moreReviewsItems?.classList.remove('active');
-    moreReviewsButton.innerHTML = 'MAIS AVALIAÇÕES';
-    moreReviewsButton.ariaExpanded = 'false';
-  } else {
-    moreReviewsItems?.classList.add('active');
     moreReviewsButton.innerHTML = 'MOSTRAR MENOS';
     moreReviewsButton.ariaExpanded = 'true';
+  } else {
+    moreReviewsButton.innerHTML = 'MAIS AVALIAÇÕES';
+    moreReviewsButton.ariaExpanded = 'false';
   }
 }
 

@@ -2,7 +2,7 @@ const servicesCards: NodeListOf<HTMLDivElement> = document.querySelectorAll(
   '.services__cards__container'
 );
 
-function addDescription(event: MouseEvent) {
+function toggleDescription(event: MouseEvent) {
   const currentElement = event.currentTarget as HTMLDivElement;
   const currentElementDescription = currentElement.lastElementChild;
 
@@ -10,5 +10,5 @@ function addDescription(event: MouseEvent) {
 }
 
 servicesCards.forEach(item => {
-  item.addEventListener('click', addDescription);
+  item.addEventListener('click', toggleDescription);
 });

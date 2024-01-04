@@ -2,7 +2,7 @@ const form = document.querySelector('form');
 const submitButton: HTMLButtonElement | null =
   document.querySelector('#btnSubmit');
 
-interface simulateApiCallsParams {
+interface SimulateApiCallsParams {
   inputName: HTMLInputElement;
   inputEmail: HTMLInputElement;
   textarea: HTMLTextAreaElement;
@@ -39,7 +39,7 @@ function formSubmit(event: SubmitEvent) {
   }
 }
 
-function simulateApiCalls(params: simulateApiCallsParams) {
+function simulateApiCalls(params: SimulateApiCallsParams) {
   submitButton.disabled = true;
   submitButton.setAttribute('aria-disabled', 'true');
   submitButton.innerHTML = 'ENVIANDO...';
@@ -65,61 +65,62 @@ function isEmailValid(email: string) {
   );
 }
 
-function setErro(
-  inputGroup: HTMLElement,
-  messageErrorElement: Element,
-  message: string
-) {
+function setErro(inputGroup: HTMLElement, message: string) {
   const input = inputGroup.children.item(1);
   input.ariaInvalid = 'true';
+
   inputGroup.classList.remove('success');
   inputGroup.classList.add('error');
+
+  const messageErrorElement = inputGroup.children.item(2);
   messageErrorElement.classList.remove('text-muted');
   messageErrorElement.innerHTML = message;
 }
 
-function setSuccess(inputGroup: HTMLElement, messageErrorElement: Element) {
+function setSuccess(inputGroup: HTMLElement) {
   const input = inputGroup.children.item(1);
   input.ariaInvalid = 'false';
+
   inputGroup.classList.remove('error');
   inputGroup.classList.add('success');
+
+  const messageErrorElement = inputGroup.children.item(2);
   messageErrorElement.classList.add('text-muted');
 }
 
 function validate(element: HTMLInputElement | HTMLTextAreaElement) {
-  const messageErrorElement = element.nextElementSibling;
   const inputGroup = element.parentElement;
 
-  if (messageErrorElement && inputGroup) {
+  if (inputGroup) {
     if (element.id === 'email') {
       if (element.value !== '' && isEmailValid(element.value)) {
-        setSuccess(inputGroup, messageErrorElement);
+        setSuccess(inputGroup);
       } else {
-        setErro(inputGroup, messageErrorElement, 'Preencha um email válido');
+        setErro(inputGroup, 'Preencha um email válido');
       }
     }
 
     if (element.id === 'name') {
       if (element.value !== '') {
         if (element.value.length > 3) {
-          setSuccess(inputGroup, messageErrorElement);
+          setSuccess(inputGroup);
         } else {
           setErro(
             inputGroup,
-            messageErrorElement,
+
             'O nome precisa ter mais de 3 letras'
           );
         }
       } else {
-        setErro(inputGroup, messageErrorElement, 'Campo obrigatório');
+        setErro(inputGroup, 'Campo obrigatório');
       }
     }
 
     if (element.id === 'message') {
       if (element.value !== '') {
-        setSuccess(inputGroup, messageErrorElement);
+        setSuccess(inputGroup);
       } else {
-        setErro(inputGroup, messageErrorElement, 'Campo obrigatório');
+        setErro(inputGroup, 'Campo obrigatório');
       }
     }
   }

@@ -10,17 +10,7 @@ let currentIndex = 0;
 let touchStartX: number | null = null;
 let moving = false;
 
-nextButton?.addEventListener('click', nextSlide);
-
-prevButton?.addEventListener('click', prevSlide);
-
-carouselContainer.addEventListener('touchstart', e => {
-  touchStartX = e.touches[0].clientX;
-
-  moving = true;
-});
-
-carouselContainer.addEventListener('touchmove', e => {
+function scrollCarousel(e: TouchEvent) {
   if (moving) {
     if (touchStartX === null) return;
 
@@ -32,7 +22,7 @@ carouselContainer.addEventListener('touchmove', e => {
 
     touchStartX = null;
   }
-});
+}
 
 function nextSlide() {
   currentIndex = (currentIndex + 1) % carouselItems.length;
@@ -56,3 +46,14 @@ function updateCarousel() {
     }
   }
 }
+
+nextButton?.addEventListener('click', nextSlide);
+
+prevButton?.addEventListener('click', prevSlide);
+
+carouselContainer.addEventListener('touchstart', e => {
+  touchStartX = e.touches[0].clientX;
+  moving = true;
+});
+
+carouselContainer.addEventListener('touchmove', scrollCarousel);

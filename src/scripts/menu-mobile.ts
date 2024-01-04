@@ -6,23 +6,23 @@ const menuMobileIcon: HTMLOrSVGImageElement | null =
 const menuMobileList: HTMLDivElement | null =
   document.querySelector('.menu-mobile');
 
-const menuMobileItemList: NodeListOf<HTMLAnchorElement> =
+const menuMobileListItem: NodeListOf<HTMLAnchorElement> =
   document.querySelectorAll('.header__nav__menu-link');
 
-function showMenuList(event: Event) {
+function showMenuMobileList(event: Event) {
   if (event.type === 'touchstart') event.preventDefault();
 
   menuMobileList?.classList.toggle('active');
 
   menuMobileButton?.setAttribute('aria-expanded', 'true');
 
-  if (menuMobileList?.classList.contains('active')) openMenuList();
-  else closeMenuList();
-}
-
-function openMenuList() {
-  menuMobileButton?.setAttribute('aria-Label', 'Fechar menu');
-  menuMobileIcon?.setAttribute('src', './src/assets/icons/close-menu-icon.svg');
+  if (menuMobileList?.classList.contains('active')) {
+    menuMobileButton?.setAttribute('aria-Label', 'Fechar menu');
+    menuMobileIcon?.setAttribute(
+      'src',
+      './src/assets/icons/close-menu-icon.svg'
+    );
+  } else closeMenuList();
 }
 
 function closeMenuList() {
@@ -35,9 +35,9 @@ function closeMenuList() {
   }
 }
 
-menuMobileButton?.addEventListener('click', showMenuList);
-menuMobileButton?.addEventListener('touchstart', showMenuList);
+menuMobileButton?.addEventListener('click', showMenuMobileList);
+menuMobileButton?.addEventListener('touchstart', showMenuMobileList);
 
-menuMobileItemList.forEach(item => {
+menuMobileListItem.forEach(item => {
   item.addEventListener('click', closeMenuList);
 });
