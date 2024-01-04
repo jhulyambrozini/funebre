@@ -7,19 +7,42 @@ const carouselContainer: HTMLDivElement | null = document.querySelector(
 );
 
 let currentIndex = 0;
+let touchStartX: number | null = null;
 
-nextButton?.addEventListener('click', () => {
-  if (currentIndex === 1) return;
-  currentIndex = (currentIndex + 1) % carouselItems.length;
-  updateCarousel();
+nextButton?.addEventListener('click', nextSlide);
+
+prevButton?.addEventListener('click', prevSlide);
+
+carouselContainer.addEventListener('touchstart', e => {
+  touchStartX = e.touches[0].clientX;
 });
 
-prevButton?.addEventListener('click', () => {
-  if (currentIndex === 2) return;
+carouselContainer.addEventListener('touchmove', e => {
+  if (touchStartX === null) return;
+
+  const touchEndX = e.touches[0].clientX;
+  const deltaX = touchEndX - touchStartX;
+
+  if (deltaX > 50) {
+    prevSlide();
+  }
+  if (deltaX < -50) {
+    nextSlide();
+  }
+
+  touchStartX = null;
+});
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % carouselItems.length;
+  updateCarousel();
+}
+
+function prevSlide() {
   currentIndex =
     (currentIndex - 1 + carouselItems.length) % carouselItems.length;
   updateCarousel();
-});
+}
 
 function updateCarousel() {
   if (carouselContainer) {
