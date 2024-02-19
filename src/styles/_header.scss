@@ -1,5 +1,6 @@
 .header {
     background-color: $color-primary-01;
+
     &__info {
         background-color: $color-primary-02;
         color: $color-primary-06;
@@ -14,6 +15,7 @@
         padding-bottom: 1.7rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        justify-items: center;
 
         &__menu {
             display: flex;

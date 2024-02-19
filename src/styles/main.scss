@@ -73,6 +73,13 @@ p {
     display: flex;
 }
 
+// @media (min-width: 1212px) {
+//     .container {
+//         padding-left: calc((100% - 1024px) / 2 + 188px);
+//         padding-right: calc((100% - 1024px) / 2 + 188px);
+//     }
+// }
+
 @media screen and (min-width: 1441px) {
 
     .container {   

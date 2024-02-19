@@ -1,6 +1,7 @@
 .reviews {
     flex-direction: column;
     margin-top: 7.2rem;
+    width: 100%;
 
     .dividing-line {
         width: 2px;
@@ -16,10 +17,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-width: 100%;
+        width: 100%;
 
         &__container {
-            
+            max-width: 100%;
             p {
                 color: $color-grey-02;
                 font-size: 1.8rem;

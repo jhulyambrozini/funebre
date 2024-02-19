@@ -10,7 +10,7 @@
 
         &__container {
             flex-direction: column;
-            width: 260px;
+            width: 240px;
             height: 303px;
             border-radius: 5px;
             background: $color-grey-10;
@@ -45,6 +45,10 @@
     .description-focused {
         display: none;
         visibility: hidden;
+    }
+
+    @media screen and (min-width: 1441px) {
+        align-items: center;
     }
 
     @media screen and (max-width: 1025px) {

@@ -6,8 +6,9 @@
     flex-direction: column;
 
     &__infos {
-      
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
         padding-bottom: 3.2rem;
         padding-top: 4rem;
     }
@@ -100,6 +101,13 @@
                 color: $color-primary-05;
                 text-decoration: none;
             }
+        }
+    }
+
+    @media  screen and (max-width: 1025px) {
+        &__infos {
+            display: flex;
+            justify-content: space-between;
         }
     }
 
