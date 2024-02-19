@@ -49,7 +49,7 @@
 
     @media screen and (max-width: 1025px) {
         &__cards {
-            justify-content: center;
+            justify-content: flex-start;
             &__container {
                 width: 240px;
             }
@@ -58,6 +58,11 @@
 
     @media screen and (max-width: 426px) {
         align-items: center;
+
+        &__cards {
+            justify-content: center;
+        }
+    
 
         .description-focused.active {
             background-color: rgb(112, 59, 9);

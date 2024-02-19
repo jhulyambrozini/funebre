@@ -1,32 +1,29 @@
 .about {
     gap: 25px;
     margin-top: 7.2rem;
+    max-width: 100%;
 
     &__image {
         object-fit: cover;
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
         border-radius: 5px;
+        width: 400px;
     }
 
     &__desc {
         color: $color-grey-02;
         font-family: $font-secondary;
-        font-size: 1.8rem;
-        line-height: 26px; 
-        min-width: 495px;
-        width: 100%;
+        font-size: 1.6rem;
+        line-height: 24px; 
+        width: 60ch;
         margin-top: 1.2rem;
     }
 
     @media screen and (max-width: 1025px) {
         margin-top: 6rem;
-        &__image {
-            width: 400px;
-        }
 
         &__desc {
-            font-size: 1.6rem;
-            line-height: 24px; 
+           width: 40ch;
         }
     }
 
